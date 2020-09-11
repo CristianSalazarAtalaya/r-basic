@@ -1,0 +1,37 @@
+---
+title: "documentacion de texto"
+author: "estadsitica descriptiva"
+date: "30/8/2020"
+output: pdf_document
+---
+
+#Header
+
+*cursiva*
+
+**negrita**
+
+~~tachado~~
+
+[Perfil](https://www.youtube.com/watch?v=FeLZrcZ0PxM)
+
+
+***
+
+#Listas ordeandas
+
+*Primero
+  +Sub item
+*segundo
+*tercero
+
+###Lostas desordenadas
+1. Primera ietm
+  + Otro item
+1. Segundo uitem
+1. tecer item
+
+
+Alumno        |Nota
+--------------|------
+Juan grabiel  | 5  

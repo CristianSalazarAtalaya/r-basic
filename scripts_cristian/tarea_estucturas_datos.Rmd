@@ -1,0 +1,87 @@
+---
+title: "TareaEstructurasDatos"
+author: "Cristian"
+date: "5/9/2020"
+output: pdf_document
+---
+
+
+# Pregunta 1
+
+$$A=\begin{pmatrix} 1 & 2 & 3  & 4 \\ 4 & 3 & 2 & 1   
+\\ 0 & 1 & 0& 2 
+\\ 3 & 0 & 4 & 0
+\end{pmatrix}$$
+
+$$B=\begin{pmatrix} 4& 3 & 2 & 1 \\ 0 &  3& 0 & 4   
+\\ 1 & 2 & 3 & 4
+\\ 0 & 1 & 0 & 2
+\end{pmatrix}$$
+## Productos
+
+```{r, message=FALSE, comment=NA, echo=FALSE}
+A = rbind(c(1,2,3,4),c(4,3,2,1),c(0,1,0,2),c(3,0,4,0))
+B = rbind(c(4,3,2,1),c(0,3,0,4),c(1,2,3,4),c(0,1,0,2))
+aporb=A%*%B
+bpora=B%*%A
+```
+
+
+
+$$A*B=\begin{pmatrix} `r sprintf(" %i & %i & %i & %i",aporb[1],aporb[2],aporb[3],aporb[4] )` 
+\\ `r sprintf(" %i & %i & %i & %i",aporb[5],aporb[6],aporb[7],aporb[8] )`  
+\\ `r sprintf(" %i & %i & %i & %i",aporb[9],aporb[10],aporb[11],aporb[12] )`  
+\\ `r sprintf(" %i & %i & %i & %i",aporb[13],aporb[14],aporb[15],aporb[16] )`  
+\end{pmatrix}$$  $\\$
+
+
+$$B*A=\begin{pmatrix} `r sprintf(" %i & %i & %i & %i",bpora[1],bpora[2],bpora[3],bpora[4] )` 
+\\ `r sprintf(" %i & %i & %i & %i",bpora[5],bpora[6],bpora[7],bpora[8] )`  
+\\ `r sprintf(" %i & %i & %i & %i",bpora[9],bpora[10],bpora[11],bpora[12] )`  
+\\ `r sprintf(" %i & %i & %i & %i",bpora[13],bpora[14],bpora[15],bpora[16] )`  
+\end{pmatrix}$$
+
+# Preguna 2
+
+dni = (5, 4, 2, 0, 1, 5, 6, 7)
+
+```{r,message=FALSE,comment=NA,echo=FALSE}
+  dni = c(5, 4, 2, 0, 1, 5, 6, 7)
+  cuadrado = dni^2
+  raiz= sqrt(dni)
+  suma = sum(dni)
+```
+1 $\\$
+En \LaTeX: $dni^{2}$= (`r cuadrado`) $\\$
+
+2 $\\$
+En \LaTeX: $\sqrt{dni}$= (`r raiz`) $\\$
+
+3 $\\$
+En \LaTeX: $\sum dni=$ `r suma` $\\$
+
+
+# Pergunta 3
+
+
+
+
+
+```{r,message=FALSE,comment=NA,echo=FALSE}
+nombre = c("C","R","I","S","T","I","A","N")
+salazar = c("S","A","L","A","Z","A","R")
+
+ressort=  sort(c(nombre,salazar))
+```
+nombre = c("C","R","I","S","T","I","A","N")  $\\$
+salazar = c("S","A","L","A","Z","A","R")
+
+En \LaTeX: $ordernado(nombre,salazar)$ `r ressort` $\\$
+
+
+
+
+
+
+
+
