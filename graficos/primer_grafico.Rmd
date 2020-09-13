@@ -1,0 +1,62 @@
+---
+title: "graficos plop"
+author: "Cristian"
+date: "10/9/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Graficos con la funcion `plot` 
+
+
+```{r primer_plot,fig.cap="Mi primer Grafico",fig.align='center'}
+
+x = c(2,6,4,9,-1)
+y = c(1,8,4,-2,4)
+plot(x,y)
+
+```
+Si no incoportamos vercto y R nos va a toamr el paramtro x como si fuera y
+
+```{r}
+
+plot(2^(1:6))
+```
+
+Plop de una funcion
+
+```{r}
+f <- function(x){ log(x)}
+plot(f)
+
+```
+
+# Parametros
+
+```{r,echo=FALSE,fig.align='center'}
+par(mfrow= c(1,2))
+n= 1:20
+
+fib = (1/sqrt(5))*((1+sqrt(5))/2)^n - (1/sqrt(5))*((1-sqrt(5))/2)^n
+
+plot(fib,xlab = "N",pch=20, cex=3, col="green" ,ylab =expression(F[n]), main = "a", log="xy")
+
+plot(fib,xlab = "N",pch=20, cex=3, col="green" ,ylab =expression(F[n]), main = "a", log="x")
+
+
+```
+
+```{r}
+n= 1:20
+fib = (1/sqrt(5))*((1+sqrt(5))/2)^n - (1/sqrt(5))*((1-sqrt(5))/2)^n
+plot(n,fib,pch=21,col="red", bg = "yellow", cex=1.2, type ="o", lwd = 2, lty="dotted", xaxp=c(0,6,5))
+points(5,5,pch=19)
+points(-3:3,(-3:3)^2, col ="blue",pch=19)
+abline(v=2, lty="dotted", col="green")
+abline(v=0:20, lty="dotted", col="green")
+
+```
+

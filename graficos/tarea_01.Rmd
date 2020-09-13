@@ -1,0 +1,119 @@
+---
+title: "Tarea01 - graficos"
+author: "Cristian"
+date: "13/9/2020"
+output: pdf_document
+---
+
+Con una sola instrucción, dibujad el gráfico de la función y=x^2menos3x+30 entre menos 15 y 15. De título, poned “Una parábola”. De etiquetas, en el eje 0X poned, en formato matemático, "x"; y en el eje 0Y, introducid y=x^2menos3x+30, también en formato matemático. Tenéis que utilizar la función curve()
+
+```{r, echo=FALSE,message=FALSE}
+
+#curve((x^2)-(3*x)+30),add=TRUE)
+curve(x^2-3*x+30,-15,15,add=TRUE,main="Una parabola",xlab="x", ylab=expression(y=x^2−3*x+30))
+
+
+```
+
+
+```{r, echo=FALSE,message=FALSE}
+
+fun = function(x){
+  x^2-3*x+30
+}
+I = c(-15:15)
+plot(fun(I), type="l",main="Una parabola",xlab="x", ylab=expression(y=x^2−3*x+30))
+
+
+```
+```{r, echo=FALSE,message=FALSE}
+
+fun = function(x){
+  x^2-3*x+30
+}
+plot(fun,-15,15,main="Una parabola",xlab="x", ylab=expression(y=x^2−3*x+30))
+
+
+```
+
+```{r}
+
+curve(5*2^x,-10,25,main="Ejercicio 3", ylab = expression(y = 5*2^x), xlab = "x")
+
+```
+
+```{r}
+curve(3*x,-10,20, main="2 rectas",sub="Dos rectas con pendiente opuesto"  , xlab = "", ylab="",col="blue");
+curve(-3*x,col="green" ,add=TRUE);
+
+legend(13,10,legend=c("3x","-3x"),lty=c(1,1),col=c("blue","green")) 
+
+```
+
+curve(3*x,-10,20, xlab = "", ylab="",col="blue", main = "2 rectas", sub = "Dos rectas con pendiente opuesto");
+
+curve(-3*x,col="green",add=TRUE);
+
+legend(13,10,legend=c("3x","-3x"),lty=c(1,1),col=c("blue","green")) 
+
+
+Dad la instrucción que añada a un gráfico anterior la recta horizontal y = 0 de color rojo con un grosor de 5 puntos.
+
+abline(h=0,col="red",lwd = 5)
+
+Dad la instrucción que añada a un gráfico anterior la recta y = 2x+7 de color azul con un grosor de 2 puntos.
+
+abline(7,2,col="blue",lwd = 2)
+
+
+Dad la instrucción que añada a un gráfico anterior la recta horizontal y = 0 de color rojo con un grosor de 5 puntos.
+
+
+
+```{r}
+
+
+plot(0,0,type = "n")
+abline(h=0,col="red",lwd = 5)
+
+```
+
+
+
+
+Dad la instrucción que añada a un gráfico anterior la recta y = 2x+7 de color azul con un grosor de 2 puntos.
+
+```{r}
+
+
+plot(2*x+7)
+abline(7,2,col="blue",lwd = 2)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
